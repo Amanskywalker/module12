@@ -32,8 +32,11 @@
 *.dSYM/
 *.su
 
-# test files
+# Eest files
 *.test
 
-# backup files
+# Backup files
 *.bak
+
+# Custom executables
+mod12
