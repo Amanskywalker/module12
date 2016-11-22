@@ -17,10 +17,7 @@ int main(int argc, char const *argv[])
 {
   // displaying the license to the user
   system('clear');
-  printf("Module12  Copyright (C) 2016  Aman Skywalker \n
-  This program comes with ABSOLUTELY NO WARRANTY; \n
-  This is free software, and you are welcome to redistribute it
-  under certain conditions; type 'license' for details.");
+  printf("Module12  Copyright (C) 2016  Aman Skywalker \nThis program comes with ABSOLUTELY NO WARRANTY; \nThis is free software, and you are welcome to redistribute it under certain conditions; type 'license' for details.\n");
 
   //a infinte while loop is called to read the input from the users
 
