@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+
+# test files
+*.test
+
+# backup files
+*.bak
