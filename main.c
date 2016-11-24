@@ -61,6 +61,30 @@ int main(int argc, char const *argv[])
         printf("sorry sir i can't understand what you said\n");
       }
     }
+    else if (preg_match(Command, "[A-Za-Z_][A-Za-Z0-9_]*[*/+-][A-Za-Z_][A-Za-Z0-9_]*"))
+    {
+      printf("A airthmetic expression detected with Variables\n");
+      if (preg_match(Command, "[+]"))
+      {
+        printf("Wow ! Its an Addition\n");
+      }
+      else if (preg_match(Command, "[-]"))
+      {
+        printf("Wow ! Its a Subtraction\n");
+      }
+      else if (preg_match(Command, "[*]"))
+      {
+        printf("Wow ! Its a Multiplication\n");
+      }
+      else if (preg_match(Command, "[/]"))
+      {
+        printf("Wow ! Its a Division\n");
+      }
+      else
+      {
+        printf("sorry sir i can't understand what you said\n");
+      }
+    }
     else
     {
       printf("Write something\n");
