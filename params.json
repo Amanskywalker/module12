@@ -1,0 +1,6 @@
+{
+  "name": "Module12",
+  "tagline": "to implement lexer using C",
+  "body": "# Module 12 or mod12\r\nA lexer in C suitable for a simple command language that handles commands, numbers, strings, and new lines, ignoring white space and comment\r\n\r\n### Module 12\r\nModule 12, I know that a weird name.\r\nBut this project started as the to implement lexer in C suitable for a simple command language that handles commands, numbers, strings, and new lines, ignoring white space and comment. and it was the 12th module in the series which i picked to do. \r\n\r\n### Implementation\r\nIt uses the regular expression to match the user input specified in the grammar ( I tried to keep grammar as closed to the original lexical analyser). A Few new custom function are made like ` preg_match() ` to implement the same functionality which is there in PHP like languages.\r\nIt also uses the clean coding method to separate the declaration part from the implementation so it easy to further extend. and also make it easy to understand.\r\nIt used a new size less custom data type ` vector `. Trying to implement c++ vector in c. \r\n### Instruction\r\n- download or clone the repo\r\n- navigate to root directory\r\n- use make to build the binary\r\n- $ ./mod12 to run it \r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
