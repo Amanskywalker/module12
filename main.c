@@ -16,7 +16,7 @@
 int main(int argc, char const *argv[])
 {
   // displaying the license to the user
-  system('clear');
+  system("clear");
   printf("Module12  Copyright (C) 2016  Aman Skywalker \nThis program comes with ABSOLUTELY NO WARRANTY; \nThis is free software, and you are welcome to redistribute it under certain conditions; type 'license' for details.\n");
 
   //a infinte while loop is called to read the input from the users
@@ -39,51 +39,15 @@ int main(int argc, char const *argv[])
     }
     else if (preg_match(Command, "[0-9][0-9]*[*/+-][0-9][0-9]*"))
     {
-      printf("A airthmetic expression detected\n");
-      if (preg_match(Command, "[+]"))
-      {
-        printf("Wow ! Its an Addition\n");
-      }
-      else if (preg_match(Command, "[-]"))
-      {
-        printf("Wow ! Its a Subtraction\n");
-      }
-      else if (preg_match(Command, "[*]"))
-      {
-        printf("Wow ! Its a Multiplication\n");
-      }
-      else if (preg_match(Command, "[/]"))
-      {
-        printf("Wow ! Its a Division\n");
-      }
-      else
-      {
-        printf("sorry sir i can't understand what you said\n");
-      }
+      printf("An airthmetic expression detected\n");
+      operator_match(Command);
+      int Answer = execute_expression(Command);
+      printf("%s = %d\n",Command,Answer);
     }
     else if (preg_match(Command, "[A-za-Z_][A-Za-z0-9_]*[*/+-][A-Za-z_][A-Za-z0-9_]*"))
     {
-      printf("A airthmetic expression with Variables detected\n");
-      if (preg_match(Command, "[+]"))
-      {
-        printf("Wow ! Its an Addition\n");
-      }
-      else if (preg_match(Command, "[-]"))
-      {
-        printf("Wow ! Its a Subtraction\n");
-      }
-      else if (preg_match(Command, "[*]"))
-      {
-        printf("Wow ! Its a Multiplication\n");
-      }
-      else if (preg_match(Command, "[/]"))
-      {
-        printf("Wow ! Its a Division\n");
-      }
-      else
-      {
-        printf("sorry sir i can't understand what you said\n");
-      }
+      printf("An airthmetic expression with Variables detected\n");
+      operator_match(Command);
     }
     else
     {
