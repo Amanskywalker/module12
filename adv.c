@@ -47,3 +47,41 @@ int preg_match(const char *string, char *pattern)
 
     return(1);
 }
+
+char operator_match(const char *string)
+{
+  if (preg_match(string, "[+]"))
+  {
+    printf("Wow ! Its an Addition\n");
+  }
+  else if (preg_match(string, "[-]"))
+  {
+    printf("Wow ! Its a Subtraction\n");
+  }
+  else if (preg_match(string, "[*]"))
+  {
+    printf("Wow ! Its a Multiplication\n");
+  }
+  else if (preg_match(string, "[/]"))
+  {
+    printf("Wow ! Its a Division\n");
+  }
+  else
+  {
+    printf("sorry sir i can't understand what you said\n");
+  }
+}
+
+int execute_expression(const char* string)
+{
+  FILE *p, *q;
+  p = fopen("cal.sh", "w");
+  q = fopen("cal_in", "w");
+  fprintf(p, "%s | bc", string);
+  fprintf(q, "%s | bc", string);
+  system("sh cal.sh");
+  p = fopen("cal_out", "r");
+  fscanf(p, "%s", string);
+  system("rm cal* cal.*");
+  return atoi(string);
+}
